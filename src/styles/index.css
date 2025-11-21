@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply font-serif;
+  }
+}
+
+.sideNavText {
+  @apply text-lg font-medium hover:text-primary transition-colors [writing-mode:vertical-lr];
+}
