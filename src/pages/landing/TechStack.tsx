@@ -47,7 +47,10 @@ export default function TechStacks() {
       icon: 'mdi:infinity',
       title: 'DevOps',
       description: 'Deployment and server management.',
-      items: [{ name: 'Netlify', icon: 'material-icon-theme:netlify-light' }],
+      items: [
+        { name: 'Netlify', icon: 'material-icon-theme:netlify-light' },
+        { name: 'Vercel', icon: 'skill-icons:vercel-light' },
+      ],
     },
     {
       icon: 'carbon:flow-connection',
@@ -65,7 +68,7 @@ export default function TechStacks() {
   ]
 
   return (
-    <div className="flex flex-col justify-center mb-48">
+    <div className="flex flex-col justify-center mb-16">
       <ScrollFloat
         animationDuration={1}
         ease="back.inOut(2)"
@@ -77,9 +80,14 @@ export default function TechStacks() {
       >
         Skills
       </ScrollFloat>
+
+      <FadeInSection className="text-lg text-center mb-10">
+        My go-to tech stack <span className="narrateText">(fueled by chaos and curiosity)</span>.
+      </FadeInSection>
+
       <div className="flex flex-col items-center gap-y-10">
         {techStacks.map((item) => (
-          <TechStackBox {...item}></TechStackBox>
+          <TechStackBox key={item.title} {...item}></TechStackBox>
         ))}
       </div>
     </div>

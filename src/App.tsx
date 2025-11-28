@@ -1,37 +1,19 @@
-import { useEffect } from 'react'
-import Lenis from '@studio-freight/lenis'
+import { motion, useScroll } from 'motion/react'
+import { initLenis } from './utils/lenis'
+import SideNavigationBar from './components/SideNavigationBar'
+import Particles from './components/animations/ReactBits/Particles'
 import Home from './pages/landing/Home'
 import AboutMe from './pages/landing/AboutMe'
 import TechStacks from './pages/landing/TechStack'
 import Projects from './pages/landing/Projects'
-import SideNavigationBar from './components/SideNavigationBar'
-import Particles from './components/animations/ReactBits/Particles'
 import Contact from './pages/landing/Contact'
-import { motion, useScroll } from 'motion/react'
+import Resume from './pages/landing/Resume'
 
 function App() {
+  initLenis()
+
   const { scrollYProgress } = useScroll()
-
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.5,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smoothWheel: true,
-    })
-
-    function raf(time: any) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
-    }
-
-    lenis.on('scroll', (e: any) => {
-      console.log(e)
-    })
-
-    requestAnimationFrame(raf)
-  }, [])
-
-  const sections = [AboutMe, TechStacks, Projects]
+  const sections = [AboutMe, TechStacks, Resume, Projects]
   const ids = ['about', 'skills', 'projects']
 
   return (
@@ -73,7 +55,9 @@ function App() {
             <section
               id={ids[i]}
               key={i}
-              className="w-full min-h-screen grid grid-cols-[1fr_3fr_1fr]"
+              className={`${
+                Section === Resume ? '' : 'w-full min-h-screen grid grid-cols-[1fr_3fr_1fr] py-24'
+              }`}
             >
               <div></div>
               <Section />

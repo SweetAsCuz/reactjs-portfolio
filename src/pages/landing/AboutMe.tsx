@@ -26,9 +26,9 @@ export default function AboutMe() {
         >
           Universiti Sains Malaysia
         </a>
-        . I'm a software engineer and designer <a className="text-sm text-gray-500">(sometimes)</a>{' '}
-        passionate about user experience design & frontend development. I enjoy building tools using
-        code for my own use.
+        . I'm a software engineer and designer <span className="narrateText">(sometimes)</span> passionate
+        about user experience design & frontend development. I enjoy building tools using code for
+        my own use.
       </FadeInSection>
       {/* A multidisciplinary developer and designer (sometimes) with a passion for creating engaging, entertaining user experiences. ✨ */}
     </div>

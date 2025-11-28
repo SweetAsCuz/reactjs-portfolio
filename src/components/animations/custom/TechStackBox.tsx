@@ -1,5 +1,5 @@
 import { motion, useInView } from 'motion/react'
-import { useRef, ReactNode } from 'react'
+import { useRef } from 'react'
 import { Icon } from '@iconify/react'
 
 interface TechStackProps {
@@ -44,6 +44,7 @@ export default function TechStackBox({
       <div className="flex flex-wrap gap-3">
         {items.map((item) => (
           <motion.div
+            key={item.name}
             whileHover={{
               scale: 1.1,
               transition: { duration: 0.1 },

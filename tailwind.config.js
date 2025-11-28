@@ -3,8 +3,12 @@ module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      fontFamily: {
+        nanum: ["'Nanum Pen Script'", 'cursive'],
+      },
+
       colors: {
-        primary: '#00cbd6',
+        primary: '#fcb3bf',
         secondary: '#ecc94b',
         tertiary: '#89a8ff',
       },

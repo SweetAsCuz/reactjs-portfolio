@@ -1,8 +1,8 @@
-import ScrollFloat from '../../components/animations/ReactBits/ScrollFloat'
-import FadeInSection from '../../components/animations/custom/FadeInSection'
-import DisplayCard from '../../components/animations/custom/DisplayCard'
 import { ReactNode, useState } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
+import DisplayCard from '../../components/animations/custom/DisplayCard'
+import FadeInSection from '../../components/animations/custom/FadeInSection'
+import ScrollFloat from '../../components/animations/ReactBits/ScrollFloat'
 
 interface Project {
   image: string
