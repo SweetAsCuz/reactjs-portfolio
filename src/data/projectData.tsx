@@ -12,7 +12,20 @@ export const projectData: Project[] = [
   {
     image: '/images/portfolio-website.png',
     title: 'Portfolio Website',
-    description: <>Personal portfolio to showcase my design and coding projects.</>,
+    description: (
+      <>
+        Personal portfolio built from scratch to showcase my design and coding projects.{` `}
+        <a
+          href="https://github.com/SweetAsCuz/found-it"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary hover:underline"
+        >
+          View on GitHub
+        </a>
+        .
+      </>
+    ),
     tags: ['React', 'TypeScript', 'TailwindCSS', 'ReactBits', 'Postgresql'],
     projectType: 'Personal',
   },
@@ -21,7 +34,7 @@ export const projectData: Project[] = [
     title: 'Found It',
     description: (
       <>
-        A USM-centric lost and found platform.{` `}
+        A USM-centric lost and found platform built, also my Final Year Project at USM.{` `}
         <a
           href="https://github.com/SweetAsCuz/found-it"
           target="_blank"

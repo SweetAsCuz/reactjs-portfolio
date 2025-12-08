@@ -77,7 +77,11 @@ export default function TechStacks() {
       items: [
         { name: 'Agile Development', icon: 'iconoir:agile' },
         { name: 'Responsive Design', icon: 'material-symbols:fit-screen' },
-        { name: '', icon: 'vscode-icons:file-type-git' },
+        { name: 'Software Testing', icon: 'mdi:ab-testing' },
+        {
+          name: 'Software Development Lifecycle',
+          icon: 'carbon:ibm-software-watsonx-data-unstructured-enrichment',
+        },
       ],
     },
   ]
