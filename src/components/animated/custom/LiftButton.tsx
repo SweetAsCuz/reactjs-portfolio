@@ -3,10 +3,14 @@ import { motion } from 'motion/react'
 
 interface LiftButtonProps {
   children: ReactNode
-  className?: string
+  containerClassName?: string
 }
 
-export default function LiftButton({ children, className = '', ...props }: LiftButtonProps) {
+export default function LiftButton({
+  children,
+  containerClassName: className = '',
+  ...props
+}: LiftButtonProps) {
   return (
     <motion.button
       whileHover={{
@@ -20,7 +24,7 @@ export default function LiftButton({ children, className = '', ...props }: LiftB
         y: -2,
         boxShadow: '2px 2px 0px #fcb3bf',
       }}
-      className={`px-4 py-2 rounded bg-[#f2f2f2] text-primary border-primary border font-medium ${className}`}
+      className={`px-4 py-2 rounded bg-white text-black hover:text-primary border-2 border-primary font-medium ${className}`}
       {...props}
     >
       {children}

@@ -1,6 +1,7 @@
 import { motion, useInView } from 'motion/react'
 import { useRef } from 'react'
 import { Icon } from '@iconify/react'
+import LiftButton from './LiftButton'
 
 interface TechStackProps {
   y?: number
@@ -30,31 +31,23 @@ export default function TechStackBox({
       initial={{ opacity: 0, y }}
       animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : y }}
       transition={{ duration, ease: 'easeOut' }}
-      className="flex flex-col rounded-lg shadow-xl p-6 bg-white w-3/4"
+      className="flex flex-col rounded-lg shadow-xl p-4 md:p-6 bg-white md:w-3/4 w-full"
     >
       <div className="flex items-center mb-4">
-        <span className="mr-3 text-primary border-primary/30 flex size-10 min-w-10 items-center justify-center rounded-lg border">
+        <span className="mr-3 text-primary border-2 border-primary/30 flex size-10 min-w-10 items-center justify-center rounded-lg">
           <Icon icon={icon} className="w-6 h-6 " />
         </span>
         <span className="flex flex-col">
-          <p className="text-base">{title}</p>
-          <p className="text-sm text-gray-400">{description}</p>
+          <p className="text-sm md:text-base">{title}</p>
+          <p className="text-xs md:text-sm text-gray-400">{description}</p>
         </span>
       </div>
-      <div className="flex flex-wrap gap-3">
+      <div className="flex flex-wrap gap-2 md:gap-3">
         {items.map((item) => (
-          <motion.div
-            key={item.name}
-            whileHover={{
-              scale: 1.1,
-              transition: { duration: 0.1 },
-            }}
-            transition={{ duration: 0.3 }}
-            className="flex items-center border border-gray-300 rounded-lg px-3 py-1"
-          >
-            <Icon icon={item.icon} className="w-5 h-5 mr-1" />
-            <p className="text-sm">{item.name}</p>
-          </motion.div>
+          <LiftButton containerClassName="flex items-center !rounded-lg !px-3 !py-1">
+            <Icon icon={item.icon} className="w-3 h-3 md:w-5 md:h-5 mr-1" />
+            <p className="text-xs md:text-sm">{item.name}</p>
+          </LiftButton>
         ))}
       </div>
     </motion.div>

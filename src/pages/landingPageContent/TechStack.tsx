@@ -1,6 +1,6 @@
-import FadeInSection from '../../components/animations/custom/FadeInSection'
-import ScrollFloat from '../../components/animations/ReactBits/ScrollFloat'
-import TechStackBox from '../../components/animations/custom/TechStackBox'
+import FadeInSection from '../../components/animated/custom/FadeInSection'
+import ScrollFloat from '../../components/animated/ReactBits/ScrollFloat'
+import TechStackBox from '../../components/animated/custom/TechStackBox'
 
 export default function TechStacks() {
   const techStacks = [
@@ -55,7 +55,7 @@ export default function TechStacks() {
     {
       icon: 'carbon:flow-connection',
       title: 'Tools',
-      description: 'Design, coding, and productivity tools.',
+      description: 'Various tools for design, versioning, productivity and etc.',
       items: [
         { name: 'Git', icon: 'vscode-icons:file-type-git' },
         { name: 'GitHub', icon: 'mdi:github' },
@@ -63,25 +63,39 @@ export default function TechStacks() {
         { name: 'Puppeteer', icon: 'material-icon-theme:puppeteer' },
         { name: 'Postman', icon: 'vscode-icons:file-type-postman' },
         { name: 'Cloudinary', icon: 'logos:cloudinary-icon' },
+        { name: 'Notion', icon: 'devicon:notion' },
+        { name: 'Trello', icon: 'devicon:trello' },
+        { name: 'Figma', icon: 'material-icon-theme:figma' },
+        { name: 'GenerativeAI', icon: 'ri:ai-generate-2' },
+        { name: 'Wondershare Filmora', icon: 'simple-icons:wondersharefilmora' },
+      ],
+    },
+    {
+      icon: 'carbon:flow-connection',
+      title: 'Other Skills',
+      description: 'abc.',
+      items: [
+        { name: 'Agile Development', icon: 'iconoir:agile' },
+        { name: 'Responsive Design', icon: 'material-symbols:fit-screen' },
+        { name: '', icon: 'vscode-icons:file-type-git' },
       ],
     },
   ]
 
   return (
-    <div className="flex flex-col justify-center mb-16">
+    <div className="sectionContainer">
       <ScrollFloat
         animationDuration={1}
         ease="back.inOut(2)"
         scrollStart="center bottom+=50%"
         scrollEnd="bottom bottom-=40%"
         stagger={0.03}
-        containerClassName="flex justify-center my-0 py-5"
-        textClassName="!text-6xl font-bold"
+        textClassName="titleText"
       >
         Skills
       </ScrollFloat>
 
-      <FadeInSection className="text-lg text-center mb-10">
+      <FadeInSection className="subtitleText">
         My go-to tech stack <span className="narrateText">(fueled by chaos and curiosity)</span>.
       </FadeInSection>
 

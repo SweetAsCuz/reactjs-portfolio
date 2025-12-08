@@ -3,7 +3,11 @@ import { getLenis } from '../utils/lenis'
 import { motion } from 'motion/react'
 import { Icon } from '@iconify/react'
 
-export default function SideNavigationBar() {
+interface SideNavigationBarProps {
+  showDots?: boolean
+}
+
+export default function SideNavigationBar({ showDots }: SideNavigationBarProps) {
   const [activeSection, setActiveSection] = useState('home')
 
   const lenis = getLenis()
@@ -43,7 +47,6 @@ export default function SideNavigationBar() {
   ]
 
   const socialMedia = [
-    // { name: 'Discord', icon: 'ic:outline-discord', link: '' },
     {
       name: 'LinkedIn',
       icon: 'mdi:linkedin',
@@ -64,6 +67,11 @@ export default function SideNavigationBar() {
       icon: 'mdi:instagram',
       link: 'https://www.instagram.com/khaiyek_02/',
     },
+    // {
+    //   name: 'Steam',
+    //   icon: 'mdi:steam',
+    //   link: 'https://steamcommunity.com/profiles/76561198913675511/',
+    // },
   ]
 
   function handleClick(sectionId: string): void {
@@ -71,17 +79,35 @@ export default function SideNavigationBar() {
     if (el) lenis.scrollTo(el)
   }
 
+  const [responsiveMode, setMode] = useState<string>()
+
+  useEffect(() => {
+    function updateMode() {
+      const width = window.innerWidth
+
+      if (width < 768) setMode('sm') // < 768
+      else if (width < 1024) setMode('md') // 768–1023
+      else if (width < 1280) setMode('lg') // 1024–1279
+      else setMode('xl') // ≥ 1280
+    }
+
+    updateMode()
+    window.addEventListener('resize', updateMode)
+    return () => window.removeEventListener('resize', updateMode)
+  }, [])
+
   return (
     <>
       {/* Left Section */}
       <nav className="w-16 md:w-32 bg-gray-0 flex flex-col fixed left-0 top-0 h-full z-50">
         <div className="flex flex-col items-center h-full justify-between mt-10">
-          <a href="/" className="flex text-4xl md:text-5xl font-bold hover:text-primary">
+          <a href="/" className="flex text-4xl md:text-7xl font-bold hover:text-primary font-nanum">
             d.
+            {/* <span className="px-2 py-1 text-red-500">{responsiveMode}</span> */}
           </a>
 
           {/* Social Media */}
-          <div className="flex flex-col items-center gap-5 z-50 !text-black">
+          <div className="hidden md:flex flex-col items-center gap-5 z-50 !text-black">
             {socialMedia.map((item) => (
               <a
                 key={item.name}
@@ -124,9 +150,9 @@ export default function SideNavigationBar() {
                   transition: { duration: 0.2 },
                 },
               }}
-              initial={{ opacity: 0, scale: 0.2 }} // very small at start
-              style={{ transformOrigin: '100% center' }} // expand from right side
-              className="text-sm"
+              initial={{ opacity: 0, scale: 0.2 }}
+              style={{ transformOrigin: '100% center' }}
+              className="text-lg font-nanum"
             >
               {item.label}
             </motion.span>
@@ -137,7 +163,7 @@ export default function SideNavigationBar() {
                 hovered: { scale: 1.2, transition: { duration: 0.2 } },
               }}
               initial={{ scale: 1 }}
-              className={`w-3.5 h-3.5 rounded-full border ${
+              className={`w-2.5 h-2.5 md:w-3.5 md:h-3.5 rounded-full border ${
                 activeSection === item.id
                   ? 'bg-primary border-primary transition-colors'
                   : 'bg-white border-gray-400'

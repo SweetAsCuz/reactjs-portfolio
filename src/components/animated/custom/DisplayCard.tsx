@@ -39,7 +39,7 @@ export default function DisplayCard({
       onHoverEnd={() => setHovered(false)}
     >
       <SpotlightCard
-        className={`text-black bg-white border-none shadow-md !p-0 max-h-[24rem] flex flex-col justify-between overflow-hidden rounded-lg ${className}`}
+        className={`text-black bg-white border-none shadow-md !p-0 max-h-[24rem] flex flex-col justify-between overflow-hidden rounded-lg cursor-pointer ${className}`}
         // spotlightColor="rgba(0, 229, 255, 0.2)"
       >
         {/* Image */}
@@ -52,7 +52,7 @@ export default function DisplayCard({
             alt={title ?? 'Project preview'}
           />
         ) : (
-          <div className="w-full h-72 flex items-center justify-center bg-gray-200 text-gray-600 text-base select-none">
+          <div className="w-full h-72 flex items-center justify-center bg-gray-200 text-gray-600 font-nanum text-xl select-none">
             {image === 'private' ? 'Confidential' : 'No Image Available'}
           </div>
         )}

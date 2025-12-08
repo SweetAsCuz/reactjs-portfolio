@@ -18,6 +18,18 @@
   }
 }
 
+.sectionContainer {
+  @apply flex flex-col justify-center px-0 md:px-6 lg:px-12;
+}
+
+.titleText {
+  @apply text-3xl md:text-5xl lg:text-6xl font-bold flex justify-center;
+}
+
+.subtitleText {
+  @apply text-sm md:text-base lg:text-lg text-center mb-16;
+}
+
 .narrateText {
   @apply text-lg text-gray-500 font-nanum;
 }
