@@ -1,1 +1,1 @@
-https://www.dewkhaiyek.vercel.app.com
+https://dewkhaiyek.vercel.app/
