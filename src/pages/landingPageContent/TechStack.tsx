@@ -72,8 +72,8 @@ export default function TechStacks() {
     },
     {
       icon: 'carbon:flow-connection',
-      title: 'Other Skills',
-      description: 'abc.',
+      title: 'Fundamental',
+      description: 'Development concepts and best practices.',
       items: [
         { name: 'Agile Development', icon: 'iconoir:agile' },
         { name: 'Responsive Design', icon: 'material-symbols:fit-screen' },
@@ -82,6 +82,7 @@ export default function TechStacks() {
           name: 'Software Development Lifecycle',
           icon: 'carbon:ibm-software-watsonx-data-unstructured-enrichment',
         },
+        { name: 'Component-Driven Architecture', icon: 'streamline-flex-color:cube' },
       ],
     },
   ]
