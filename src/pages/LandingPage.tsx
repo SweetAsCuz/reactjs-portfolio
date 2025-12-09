@@ -20,7 +20,7 @@ export default function LandingPage() {
           className={`${
             Section === Resume
               ? ''
-              : 'grid grid-cols-[1fr_8fr_1fr] md:grid-cols-[1fr_6fr_1fr] lg:grid-cols-[1fr_3fr_1fr] py-16 md:py-20 lg:py-24'
+              : 'min-h-screen grid grid-cols-[1fr_8fr_1fr] md:grid-cols-[1fr_6fr_1fr] lg:grid-cols-[1fr_3fr_1fr] py-16 md:py-20 lg:py-24'
           }`}
         >
           <div></div>

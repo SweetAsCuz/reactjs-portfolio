@@ -2,17 +2,13 @@ import SplitText from '../../components/animated/ReactBits/SplitText'
 import RotatingText from '../../components/animated/ReactBits/RotatingText'
 import { Icon } from '@iconify/react'
 import { getLenis } from '../../utils/lenis'
-import { motion, useInView } from 'motion/react'
-import { useRef } from 'react'
+import { motion } from 'motion/react'
 
 export default function Home() {
   function handleClick(): void {
     const lenis = getLenis()
     lenis.scrollTo('#about')
   }
-
-  const ref = useRef(null)
-  const isInView = useInView(ref, { amount: 0 })
 
   return (
     <section id="home" className="flex flex-col min-h-screen items-center">
@@ -46,16 +42,14 @@ export default function Home() {
               rotationInterval={2000}
             />
           </div>
-          <div />
         </div>
       </div>
       <motion.a
-        ref={ref}
         className="my-10 hover:text-primary"
         onClick={handleClick}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: isInView ? 1 : 0 }}
-        transition={{ duration: 1.2, ease: 'easeOut' }}
+        initial={{ y: 100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: 'easeOut', delay: 0.7 }}
         whileHover={{
           y: [0, 6, -3, 6, 0],
           transition: {
@@ -64,7 +58,9 @@ export default function Home() {
           },
         }}
       >
-        <Icon icon="tabler:chevron-down" className="w-12 h-12 cursor-pointer" />
+        <div className="w-12 h-12 flex items-center justify-center">
+          <Icon icon="tabler:chevron-down" className="w-12 h-12 cursor-pointer" />
+        </div>
       </motion.a>
     </section>
   )

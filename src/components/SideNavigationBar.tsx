@@ -99,7 +99,12 @@ export default function SideNavigationBar({ showDots }: SideNavigationBarProps) 
   return (
     <>
       {/* Left Section */}
-      <nav className="w-16 md:w-32 bg-gray-0 flex flex-col fixed left-0 top-0 h-full z-50">
+      <motion.nav
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
+        className="w-16 md:w-32 bg-gray-0 flex flex-col fixed left-0 top-0 h-full z-50"
+      >
         <div className="flex flex-col items-center h-full justify-between mt-10">
           <a href="/" className="flex text-4xl md:text-7xl font-bold hover:text-primary font-nanum">
             d.
@@ -130,10 +135,15 @@ export default function SideNavigationBar({ showDots }: SideNavigationBarProps) 
             <div className="h-24 w-px bg-black" />
           </div>
         </div>
-      </nav>
+      </motion.nav>
 
       {/* Right Section */}
-      <div className="fixed right-4 md:right-10 top-1/2 -translate-y-1/2 flex flex-col z-50">
+      <motion.div
+        initial={{ x: 100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 }}
+        className="fixed right-4 md:right-10 top-0 bottom-0 z-50 flex flex-col justify-center"
+      >
         {navItems.map((item) => (
           <motion.button
             key={item.id}
@@ -144,11 +154,7 @@ export default function SideNavigationBar({ showDots }: SideNavigationBarProps) 
             {/* Tooltip */}
             <motion.span
               variants={{
-                hovered: {
-                  opacity: 1,
-                  scale: 1,
-                  transition: { duration: 0.2 },
-                },
+                hovered: { opacity: 1, scale: 1, transition: { duration: 0.2 } },
               }}
               initial={{ opacity: 0, scale: 0.2 }}
               style={{ transformOrigin: '100% center' }}
@@ -171,7 +177,7 @@ export default function SideNavigationBar({ showDots }: SideNavigationBarProps) 
             />
           </motion.button>
         ))}
-      </div>
+      </motion.div>
     </>
   )
 }
