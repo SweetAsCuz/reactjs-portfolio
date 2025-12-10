@@ -44,7 +44,7 @@ export default function TechStackBox({
       </div>
       <div className="flex flex-wrap gap-2 md:gap-3">
         {items.map((item) => (
-          <LiftButton containerClassName="flex items-center !rounded-lg !px-3 !py-1">
+          <LiftButton key={item.name} containerClassName="flex items-center !rounded-lg !px-3 !py-1">
             <Icon icon={item.icon} className="w-3 h-3 md:w-5 md:h-5 mr-1" />
             <p className="text-xs md:text-sm">{item.name}</p>
           </LiftButton>
