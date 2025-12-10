@@ -1,4 +1,3 @@
-import SplitText from '../../components/animated/ReactBits/SplitText'
 import RotatingText from '../../components/animated/ReactBits/RotatingText'
 import { Icon } from '@iconify/react'
 import { getLenis } from '../../utils/lenis'
@@ -13,19 +12,15 @@ export default function Home() {
   return (
     <section id="home" className="flex flex-col min-h-screen items-center">
       <div className="flex justify-center min-w-full my-auto">
-        <div className="flex flex-col justify-center text-black text-left min-w-60">
-          <SplitText
-            text="Dew Khai Yek"
-            className="mb-4 text-lg md:text-xl text-gray-500 font-semibold tracking-[.25em]"
-            delay={100}
-            duration={0.6}
-            ease="power3.out"
-            splitType="chars"
-            from={{ opacity: 0, y: 40 }}
-            to={{ opacity: 1, y: 0 }}
-            threshold={0.1}
-            textAlign="left"
-          />
+        <motion.div
+          initial={{ y: -30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 1.2 }}
+          className="flex flex-col justify-center text-black text-left min-w-60"
+        >
+          <p className="mb-4 text-lg md:text-xl text-gray-500 font-semibold tracking-[.25em]">
+            Dew Khai Yek
+          </p>
           <div className="text-xl md:text-3xl lg:text-6xl font-bold">
             <p>Software Engineer @ USM</p>
 
@@ -42,7 +37,7 @@ export default function Home() {
               rotationInterval={2000}
             />
           </div>
-        </div>
+        </motion.div>
       </div>
       <motion.a
         className="my-10 hover:text-primary"
