@@ -30,10 +30,7 @@ export default function Contact() {
   ]
 
   return (
-    <section
-      className="sticky bottom-0 left-0 min-h-screen flex flex-col bg-cover bg-center bg-[#ffdee4]"
-      style={{ backgroundImage: "url('/images/b.jpg')" }}
-    >
+    <section className="sticky bottom-0 left-0 min-h-screen flex flex-col bg-[#ffdee4]">
       <div className="flex-grow grid grid-cols-[1fr_3fr_1fr]">
         <div></div>
 

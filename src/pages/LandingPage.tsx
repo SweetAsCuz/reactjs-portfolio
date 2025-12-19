@@ -6,13 +6,11 @@ import Resume from './landingPageContent/Resume'
 import Contact from './landingPageContent/Contact'
 
 export default function LandingPage() {
-  const sections = [AboutMe, TechStacks, Resume, Projects]
-  const ids = ['about', 'skills', 'resume', 'projects']
+  const sections = [Home, AboutMe, TechStacks, Resume, Projects]
+  const ids = ['home', 'about', 'skills', 'resume', 'projects']
 
   return (
     <>
-      <Home />
-
       {sections.map((Section, i) => (
         <section
           id={ids[i]}
@@ -28,8 +26,6 @@ export default function LandingPage() {
           <div></div>
         </section>
       ))}
-
-      <Contact />
     </>
   )
 }
