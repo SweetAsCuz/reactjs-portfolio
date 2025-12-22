@@ -3,10 +3,10 @@ import LiftButton from '../../components/animated/custom/LiftButton'
 export default function Resume() {
   return (
     <section
-      className="bg-cover bg-center py-10 md:py-16 lg:py-24"
+      className="bg-cover bg-center py-16 my-10 md:my-16 lg:my-24"
       style={{
         backgroundImage: "url('/images/resume-bg.png'",
-        backgroundAttachment: 'fixed',
+        backgroundAttachment: 'fixed', // Buggy in Safari
       }}
     >
       <div className="flex flex-col items-center text-center">

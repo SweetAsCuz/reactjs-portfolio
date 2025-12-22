@@ -3,7 +3,6 @@ import AboutMe from './landingPageContent/AboutMe'
 import TechStacks from './landingPageContent/TechStack'
 import Projects from './landingPageContent/Projects'
 import Resume from './landingPageContent/Resume'
-import Contact from './landingPageContent/Contact'
 
 export default function LandingPage() {
   const sections = [Home, AboutMe, TechStacks, Resume, Projects]
@@ -18,7 +17,7 @@ export default function LandingPage() {
           className={`${
             Section === Resume
               ? ''
-              : 'min-h-screen grid grid-cols-[1fr_8fr_1fr] md:grid-cols-[1fr_6fr_1fr] lg:grid-cols-[1fr_3fr_1fr] py-16 md:py-20 lg:py-24'
+              : 'min-h-screen grid grid-cols-[1fr_8fr_1fr] md:grid-cols-[1fr_6fr_1fr] lg:grid-cols-[1fr_3fr_1fr]'
           }`}
         >
           <div></div>
