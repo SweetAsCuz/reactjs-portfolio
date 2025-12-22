@@ -64,7 +64,6 @@ export default function TechStacks() {
         { name: 'Postman', icon: 'vscode-icons:file-type-postman' },
         { name: 'Cloudinary', icon: 'logos:cloudinary-icon' },
         { name: 'Notion', icon: 'devicon:notion' },
-        { name: 'Trello', icon: 'devicon:trello' },
         { name: 'Figma', icon: 'material-icon-theme:figma' },
         { name: 'GenerativeAI', icon: 'ri:ai-generate-2' },
         { name: 'Wondershare Filmora', icon: 'simple-icons:wondersharefilmora' },
@@ -75,7 +74,7 @@ export default function TechStacks() {
       title: 'Fundamental',
       description: 'Development concepts and best practices.',
       items: [
-        { name: 'Agile Development', icon: 'iconoir:agile' },
+        { name: 'Scrum/Agile Development', icon: 'iconoir:agile' },
         { name: 'Responsive Design', icon: 'material-symbols:fit-screen' },
         { name: 'Software Testing', icon: 'mdi:ab-testing' },
         {
