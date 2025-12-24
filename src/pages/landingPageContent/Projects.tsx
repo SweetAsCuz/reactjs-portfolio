@@ -21,7 +21,7 @@ export default function Timeline() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
 
   return (
-    <div className="sectionContainer">
+    <div className="sectionContainer pb-16">
       {selectedProject && (
         <ProjectDrawer isOpen={isOpen} onOpenChange={setOpen} projectData={selectedProject} />
       )}
