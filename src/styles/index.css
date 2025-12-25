@@ -18,6 +18,14 @@
   }
 }
 
+@supports (-webkit-touch-callout: none) {
+  .resume-bg {
+    background-attachment: scroll !important;
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+}
+
 .sectionContainer {
   @apply flex flex-col justify-center px-0 md:px-6 lg:px-12;
 }

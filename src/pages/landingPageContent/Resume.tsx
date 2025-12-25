@@ -3,7 +3,7 @@ import LiftButton from '../../components/animated/custom/LiftButton'
 export default function Resume() {
   return (
     <section
-      className="bg-cover bg-center py-16 my-10 md:my-16 lg:my-24"
+      className="resume-bg bg-cover bg-center py-16 my-10 md:my-16 lg:my-24"
       style={{
         backgroundImage: "url('/images/resume-bg.png'",
         backgroundAttachment: 'fixed', // Buggy in Safari
