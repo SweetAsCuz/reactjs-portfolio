@@ -30,6 +30,20 @@ export const projectData: Project[] = [
     projectType: 'Personal',
   },
   {
+    image: '',
+    title: 'Web Scraper',
+    description: (
+      <>
+        A programme built using Node.js, Typescript and Puppeteer to scrape website data. Works for
+        both DOM-based and API-based webscraping. Can handle dynamic content, pagination, Captcha,
+        Cloudflare and other related challenges effectively. Supports all sort of file type like
+        csv, xlsx and etc.
+      </>
+    ),
+    tags: ['Node.js', 'Puppeteer', 'TypeScript'],
+    projectType: 'Personal',
+  },
+  {
     image: '/images/foundit.png',
     title: 'Found It',
     description: (
