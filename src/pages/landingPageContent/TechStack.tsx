@@ -81,7 +81,6 @@ export default function TechStacks() {
           name: 'Software Development Lifecycle',
           icon: 'carbon:ibm-software-watsonx-data-unstructured-enrichment',
         },
-        { name: 'Component-Driven Architecture', icon: 'streamline-flex-color:cube' },
       ],
     },
   ]

@@ -16,7 +16,7 @@ export default function AboutMe() {
       </ScrollFloat>
 
       <FadeInSection className="subtitleText">
-        Hi, I'm a Computer Science freshgraduate from{' '}
+        Hi, I'm a Computer Science graduate from{' '}
         <a
           className="text-primary hover:bg-primary hover:text-white cursor-pointer"
           href="https://www.usm.my/ms/"
@@ -25,11 +25,10 @@ export default function AboutMe() {
         >
           Universiti Sains Malaysia
         </a>
-        . I'm a software engineer and designer <span className="narrateText">(sometimes)</span>{' '}
-        passionate about user experience design & frontend development. I enjoy building tools using
-        code for my own use.
+        . I've studied software engineering. I love exploring latest techs and integrating them into
+        my life.
+        {/* <span className="narrateText">(sometimes)</span>{' '} */}
       </FadeInSection>
-      {/* A multidisciplinary developer and designer (sometimes) with a passion for creating engaging, entertaining user experiences. ✨ */}
     </div>
   )
 }

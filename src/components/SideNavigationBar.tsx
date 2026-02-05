@@ -79,22 +79,22 @@ export default function SideNavigationBar({ showDots }: SideNavigationBarProps) 
     if (el) lenis.scrollTo(el)
   }
 
-  const [responsiveMode, setMode] = useState<string>()
+  // const [responsiveMode, setMode] = useState<string>()
 
-  useEffect(() => {
-    function updateMode() {
-      const width = window.innerWidth
+  // useEffect(() => {
+  //   function updateMode() {
+  //     const width = window.innerWidth
 
-      if (width < 768) setMode('sm') // < 768
-      else if (width < 1024) setMode('md') // 768–1023
-      else if (width < 1280) setMode('lg') // 1024–1279
-      else setMode('xl') // ≥ 1280
-    }
+  //     if (width < 768) setMode('sm') // < 768
+  //     else if (width < 1024) setMode('md') // 768–1023
+  //     else if (width < 1280) setMode('lg') // 1024–1279
+  //     else setMode('xl') // ≥ 1280
+  //   }
 
-    updateMode()
-    window.addEventListener('resize', updateMode)
-    return () => window.removeEventListener('resize', updateMode)
-  }, [])
+  //   updateMode()
+  //   window.addEventListener('resize', updateMode)
+  //   return () => window.removeEventListener('resize', updateMode)
+  // }, [])
 
   return (
     <>

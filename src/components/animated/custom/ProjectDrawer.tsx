@@ -1,6 +1,5 @@
 import { Drawer } from 'vaul'
 import { Project } from '../../../data/projectData'
-import { motion } from 'motion/react'
 import LiftButton from './LiftButton'
 
 interface ProjectDrawerProps {
