@@ -31,7 +31,7 @@ export const projectData: Project[] = [
   },
   {
     image: '',
-    title: 'Web Scraper (PM if interested)',
+    title: 'Web Scraper',
     description: (
       <>
         A programme built using Node.js, Typescript and Puppeteer to scrape website data. Works for
@@ -91,18 +91,18 @@ export const projectData: Project[] = [
     tags: ['MQL5', 'Metatrader 5'],
     projectType: 'Personal',
   },
-  {
-    image: '/images/bookmyshow.png',
-    title: 'Ticket Bot (PM if interested)',
-    description: (
-      <>
-        A fully automated robot built to scalp event/concert tickets on online platform such as
-        BookMyShow.
-      </>
-    ),
-    tags: ['Node.js', 'Express.js', 'Puppeteer', 'GoogleGenAI', 'OCR', 'Postman', 'TypeScript'],
-    projectType: 'Personal',
-  },
+  // {
+  //   image: '/images/bookmyshow.png',
+  //   title: 'Ticket Bot (PM if interested)',
+  //   description: (
+  //     <>
+  //       A fully automated robot built to scalp event/concert tickets on online platform such as
+  //       BookMyShow.
+  //     </>
+  //   ),
+  //   tags: ['Node.js', 'Express.js', 'Puppeteer', 'GoogleGenAI', 'OCR', 'Postman', 'TypeScript'],
+  //   projectType: 'Personal',
+  // },
   {
     image: '/images/vilor-event.png',
     title: 'Vilor Event Page',
