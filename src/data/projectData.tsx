@@ -91,18 +91,27 @@ export const projectData: Project[] = [
     tags: ['MQL5', 'Metatrader 5'],
     projectType: 'Personal',
   },
-  // {
-  //   image: '/images/bookmyshow.png',
-  //   title: 'Ticket Bot (PM if interested)',
-  //   description: (
-  //     <>
-  //       A fully automated robot built to scalp event/concert tickets on online platform such as
-  //       BookMyShow.
-  //     </>
-  //   ),
-  //   tags: ['Node.js', 'Express.js', 'Puppeteer', 'GoogleGenAI', 'OCR', 'Postman', 'TypeScript'],
-  //   projectType: 'Personal',
-  // },
+  {
+    image: 'private',
+    title: 'Queue Bot',
+    description: (
+      <>
+        A fully automated programme built to scalp event/concert tickets on several online
+        platforms.
+      </>
+    ),
+    tags: [
+      'Node.js',
+      'Express.js',
+      'Python',
+      'OCR',
+      'Puppeteer',
+      'GoogleGenAI',
+      'Postman',
+      'TypeScript',
+    ],
+    projectType: 'Personal',
+  },
   {
     image: '/images/vilor-event.png',
     title: 'Vilor Event Page',
